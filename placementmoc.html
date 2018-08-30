@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 26px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+.mySlides{display:none;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+.item-1, 
+.item-2, 
+.item-3{
+	position: absolute;
+  display: block;
+	top: 4em;
+  
+  width: 60%;
+  
+  font-size: 4em;
+
+	animation-duration: 15.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 110%; opacity: 0; }
+}
+
+p{color:white;
+  font-family:verdana;
+  font-size:500%;
+  }
+ body{font-family: "Lato", sans-serif;
+} 
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+ </style>
+</head>
+<body>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">my profile</a>
+  <a href="hm2.html">CSE</a>
+  <a href="#">IT</a>
+   <a href="#">ME</a>
+    <a href="#">EEE</a>
+	<a href="#">ECE</a>
+	<a href="#">AME</a>
+  <a href="#">AptitudE</a>
+  <a href="#">Sample Papers</a>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+     
+
+<ul>
+<li><span style=" display: block;color: white;text-align: center;padding: 26px; text-decoration: none;" onclick="openNav()">&#9776; SELECT</span></li>
+  <li><a href="LOGIN.html">LOGIN</a></li>
+  <li><a href="createaccount.html">CREATE ACCOUNT</a></li>
+  <li><a href="about.html">ABOUT</a></li>
+  </ul>
+<div class="w3-content w3-section" style="width:device-width;">
+  <img class="mySlides w3-animate-right" src="placement.jpg" style="width:100%; opacity:1.5;">
+  <img class="mySlides w3-animate-right" src="second1.jpg" style="width:100%">
+  <img class="mySlides w3-animate-right" src="place.jpg" style="width:100%;">
+  <div>
+<p class="item-1" style="color:white"><b>Work hard in silence, Let your success be your noise.</b></p>
+<p class="item-2"><b>Limits exist only in the mind</b></p>
+<p class="item-3" style="color:skyblue"><b>Yes you can!</b></p>
+  </div>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5120);    
+}
+
+</script>
+</body>
+</html>
